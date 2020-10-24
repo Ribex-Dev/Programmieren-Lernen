@@ -1,0 +1,13 @@
+name: Learn
+version: 1.0
+author: ribex
+main: de.ribex.learn.Main
+commands:
+  test:
+    aliases: [t]
+  fly:
+    permission: fly.own
+    permission-message: '§cKeine Permission!'
+  heal:
+    permission: heal.own
+    permission-message: '§cKeine Permission!'
