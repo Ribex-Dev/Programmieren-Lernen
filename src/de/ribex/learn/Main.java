@@ -15,7 +15,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {                                        //Start des Plugins
-        getLogger().info( ChatColor.GREEN + "Plugin enabled");
+        getLogger().info( "Plugin enabled");
 
         //Initialisieren der Commands
         getCommand("test").setExecutor(new TestCommand());
@@ -35,6 +35,6 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info( ChatColor.RED + "Plugin disabled");
+        getLogger().info( "Plugin disabled");
     }
 }

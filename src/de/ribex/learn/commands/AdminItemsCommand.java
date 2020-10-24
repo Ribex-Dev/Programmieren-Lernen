@@ -21,8 +21,8 @@ public class AdminItemsCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player){              //Üerprüfen ob der Commandsender ein Spieler ist
             Player player = (Player) sender;        //Den Spieler on player schreiben
-            Inventory inventory = Bukkit.createInventory(null , 9*2 , "§cAdminItems");
-            ItemStack stack = new ItemStack(Material.DIAMOND_SWORD , 9);
+            Inventory inventory = Bukkit.createInventory(null , 1*1 , "§cAdminItems");
+            ItemStack stack = new ItemStack(Material.DIAMOND_SWORD , 1);
 
             ArrayList<String> lore = new ArrayList<>();
                 lore.add("   ");
@@ -39,7 +39,7 @@ public class AdminItemsCommand implements CommandExecutor {
                     meta.addEnchant(Enchantment.LOOT_BONUS_MOBS, 10 , true);
             stack.setItemMeta(meta);
 
-            inventory.setItem(3, stack);
+            inventory.setItem(0, stack);
             player.openInventory(inventory);
             player.sendMessage(Main.getPrefix() + ChatColor.GREEN + "Du hast das AdminItems Menue geöffnet");
         }else {
