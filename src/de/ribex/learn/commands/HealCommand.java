@@ -1,5 +1,6 @@
 package de.ribex.learn.commands;
 
+import de.ribex.learn.Main;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,7 +15,7 @@ public class HealCommand implements CommandExecutor {
 
                 p.setFoodLevel(40);
                 p.setHealth(20);
-                p.sendMessage("§aDu wurdest geheilt und gefüttert!");
+                p.sendMessage(Main.getPrefix() + "§aDu wurdest geheilt!");
 
             }else{
                 sender.sendMessage("§cDu muss ein Spieler sein!");

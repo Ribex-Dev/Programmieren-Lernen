@@ -1,5 +1,6 @@
 package de.ribex.learn.commands;
 
+import de.ribex.learn.Main;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,13 +19,13 @@ public class FlyCommand implements CommandExecutor {
 
                     p.setAllowFlight(true);
                     p.setFlying(true);
-                    p.sendMessage("§aDu kannst nun fliegen");
+                    p.sendMessage(Main.getPrefix() + "§aDu kannst nun fliegen");
 
                 }else {
 
                     p.setAllowFlight(false);
                     p.setFlying(false);
-                    p.sendMessage("§cDu kannst jezt nicht mehr fliegen");
+                    p.sendMessage(Main.getPrefix() +"§cDu kannst jezt nicht mehr fliegen");
 
                 }
 

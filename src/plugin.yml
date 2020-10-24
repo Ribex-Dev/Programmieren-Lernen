@@ -11,3 +11,7 @@ commands:
   heal:
     permission: heal.own
     permission-message: '§cKeine Permission!'
+  adminitems:
+    aliases: [ai]
+    permission: adminitems
+    permission-message: '§cKeine Permission!'

@@ -1,5 +1,6 @@
 package de.ribex.learn;
 
+import de.ribex.learn.commands.AdminItemsCommand;
 import de.ribex.learn.commands.FlyCommand;
 import de.ribex.learn.commands.HealCommand;
 import de.ribex.learn.commands.TestCommand;
@@ -14,12 +15,13 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {                                        //Start des Plugins
-        getLogger().info( "§aPlugin Loaded");
+        getLogger().info( ChatColor.GREEN + "Plugin enabled");
 
         //Initialisieren der Commands
         getCommand("test").setExecutor(new TestCommand());
         getCommand("fly").setExecutor(new FlyCommand());
         getCommand("heal").setExecutor(new HealCommand());
+        getCommand("adminitems").setExecutor(new AdminItemsCommand());
 
         //Initialisieren der Events
         PluginManager manager = Bukkit.getPluginManager();
@@ -28,11 +30,11 @@ public class Main extends JavaPlugin {
     }
 
     public static String getPrefix(){
-        return ChatColor.GRAY + "[" + ChatColor.GOLD + "Lean-Plugin" + ChatColor.GRAY + "] > ";
+        return ChatColor.GRAY + "[" + ChatColor.GOLD + "Learn-Plugin" + ChatColor.GRAY + "] > ";
     }
 
     @Override
     public void onDisable() {
-        getLogger().info( "§cPlugin Disabled");
+        getLogger().info( ChatColor.RED + "Plugin disabled");
     }
 }

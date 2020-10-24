@@ -30,7 +30,7 @@ public class TestCommand implements CommandExecutor {
             lore.add("§a>> Wie macht man das?");
             lore.add("    ");
             meta.setLore(lore);
-            meta.addEnchant(Enchantment.KNOCKBACK, 1000 , true);
+            meta.addEnchant(Enchantment.KNOCKBACK, -1000 , true);
             stack.setItemMeta(meta);
 
             p.getInventory().addItem(stack);
